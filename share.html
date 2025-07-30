@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Share a Book | Digital Library Hub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">📚 Digital Library Hub</div>
+    <nav id="main-nav">
+      <button class="nav-toggle" aria-label="Open navigation">&#9776;</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="share.html" class="active">Share</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="share-main">
+    <section class="share-form-section">
+      <h1>Share a Book</h1>
+      <form class="share-form">
+        <input type="text" placeholder="Book Title" required>
+        <input type="text" placeholder="Author" required>
+        <input type="text" placeholder="Genre" required>
+        <textarea placeholder="Short Description" required></textarea>
+        <input type="url" placeholder="Cover Image URL (optional)">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Digital Library Hub. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+  <script>
+    // Simple form feedback
+    document.querySelector('.share-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for sharing a book!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
